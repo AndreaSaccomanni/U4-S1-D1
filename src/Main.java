@@ -18,16 +18,32 @@ public class Main {
         System.out.println("Il risultato del metodo inserisciInArray è: " + Arrays.toString(newArray));
 
         //ESERCIZIO 2
-        main();
+        main1();
 
         //ESERCIZIO 3
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Inserisci un valore decimale per la base!");
+        double base = scanner.nextDouble();
+        System.out.println("Inserisci un valore decimale per l'altezza!");
+        double altezza = scanner.nextDouble();
+        double perimetro = perimetroRettangolo(base, altezza);
+        System.out.println("Il perimetro del rettangolo è: " + perimetro);
 
-        //perimetroRettangolo();
 
-
-        int numPariODispari = pariDispari(6);
+        System.out.println("Inserisci un numero, se è pari il risultato sarà 0, altrimenti 1");
+        int num = scanner.nextInt();
+        int numPariODispari = pariDispari(num);
         System.out.println("Il risultato del metodo pariDispari è: " + numPariODispari);
 
+
+        System.out.println("Inserisci il lato 1:");
+        double lato1 = scanner.nextDouble();
+        System.out.println("Inserisci il lato 2:");
+        double lato2 = scanner.nextDouble();
+        System.out.println("Inserisci il lato 3:");
+        double lato3 = scanner.nextDouble();
+        double area = areaTriagolo(lato1, lato2, lato3);
+        System.out.println("L'area del triangolo è: " + area);
     }
 
 
@@ -58,7 +74,7 @@ public class Main {
         return newArr;
         }
 
-        public static void  main(){
+        public static void  main1(){
         Scanner scanner = new  Scanner(System.in);
         System.out.println("Inserisci tre nomi a tua scelta!");
                 String nome1= scanner.nextLine();
@@ -68,20 +84,23 @@ public class Main {
                 System.out.println("In ordine inverso: " + nome3 + nome2 + nome1);
 
         }
-//        public static void perimetroRettangolo(){
-//        Scanner scanner = new Scanner(System.in);
-//            System.out.println("Inserisci la base del rettangolo!");
-//        double base = scanner.nextDouble();
+
+
+        public static double perimetroRettangolo(double base, double altezza){
 //
-//            System.out.println("Inserisci l'altezza del rettangolo!");
-//        double altezza = scanner.nextDouble();
-//
-//        double perimetro = 2*(base + altezza);
-//            System.out.println("Il risultato del metodo perimetroRettanngolo è: " + perimetro);
-//
-//        }
+            double perimetro = 2*(base+altezza);
+            return perimetro;
+
+       }
+
+
          public static int pariDispari(int num){
-        Scanner scanner = new Scanner(System.in);
+
              return num % 2 == 0 ? 0 : 1;
+         }
+         public static double areaTriagolo(double lato1, double lato2, double lato3){
+        double semiPerimetro = ( lato1 + lato2 + lato3) / 2;
+        double area = Math.sqrt(semiPerimetro * (semiPerimetro - lato1) * (semiPerimetro - lato2) * (semiPerimetro - lato3));
+        return area;
          }
     }
