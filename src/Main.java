@@ -60,7 +60,7 @@ public class Main {
                 System.out.println("In ordine inverso: " + nome3 + nome2 + nome1);
 
         }
-        public static void perimetroRettangolo(int perimetrooooo){
+        public static void perimetroRettangolo(int perimetro){
 
         }
     }
