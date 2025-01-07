@@ -20,6 +20,14 @@ public class Main {
         //ESERCIZIO 2
         main();
 
+        //ESERCIZIO 3
+
+        //perimetroRettangolo();
+
+
+        int numPariODispari = pariDispari(6);
+        System.out.println("Il risultato del metodo pariDispari è: " + numPariODispari);
+
     }
 
 
@@ -60,7 +68,20 @@ public class Main {
                 System.out.println("In ordine inverso: " + nome3 + nome2 + nome1);
 
         }
-        public static void perimetroRettangolo(int perimetro){
-
-        }
+//        public static void perimetroRettangolo(){
+//        Scanner scanner = new Scanner(System.in);
+//            System.out.println("Inserisci la base del rettangolo!");
+//        double base = scanner.nextDouble();
+//
+//            System.out.println("Inserisci l'altezza del rettangolo!");
+//        double altezza = scanner.nextDouble();
+//
+//        double perimetro = 2*(base + altezza);
+//            System.out.println("Il risultato del metodo perimetroRettanngolo è: " + perimetro);
+//
+//        }
+         public static int pariDispari(int num){
+        Scanner scanner = new Scanner(System.in);
+             return num % 2 == 0 ? 0 : 1;
+         }
     }
